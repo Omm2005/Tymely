@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import React from 'react'
 import Image from 'next/image'
-import TymelyLogo from '@/../public/Tymelylogo.png'
+import TymelyLogo from '@/../public/tymely-logo.png'
 import { Metadata } from 'next'
 import TymelyLogoIco from '@/../public/favicon.ico'
 
