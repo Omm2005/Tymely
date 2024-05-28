@@ -78,7 +78,7 @@ const Workflowform = ({ subTitle, title }: Props) => {
         setClose()
       }
       } catch (error) {
-        toast.error("An error occurred")
+        toast.error("Try again after few minutes. GEMINI IS ON IT'S EDGE!!")
         console.error(error)
       } finally {
         setLoading(false)

@@ -14,7 +14,6 @@ const ThemeImage = ({
     DarkModeImage
 }: Props) => {
     const { theme } = useTheme();
-    console.log(theme)
   return (
     <>
     {

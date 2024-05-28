@@ -47,7 +47,7 @@ export function BentoGridSecondDemo() {
       commingSoon: false,
     },
     {
-      title: "Oragnaize your life.",
+      title: "Organize your life.",
       description:
       "Organize your life and plan your weeks.",
       header: <Image src={theme === 'dark' ? TymelyTimeBlocker : TymelyTimeBlockerLight} alt="TymelyPreview" className="z-0 overflow-hidden object-cover opacity-60 group-hover/bento:scale-105 transition-all h-32 md:h-auto brightness-75 rounded-lg" />,
