@@ -11,7 +11,7 @@ import { BorderBeam } from "@/components/ui/shimmer-border-beam";
 import BoxReveal from "@/components/ui/box-reveal";
 import NumberTicker from "@/components/ui/number-ticker";
 import { BentoGridSecondDemo } from "@/components/Bento";
-import TymelyLogo from "@/../public/Tymelylogo.png"
+import TymelyLogo from "@/../public/tymely-logo.png"
 import { Button } from "@/components/ui/button";
 import WordPullUp from "@/components/ui/words-pullup";
 import RadialGradient from "@/components/global/radical-gradient";
@@ -27,11 +27,11 @@ export default async function Home() {
     <Navbar user={user} />
     <section className="h-auto w-full md:py-10 py-3 flex flex-col justify-center items-center md:gap-7 gap-3 mx-10">
       <RadialGradient className="-z-10" size={500} />
+        <Link href={'https://github.com/Omm2005/Tymely'} target="_blank" className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-foreground from-foreground to-muted-foreground lg:text-lg">
     <ShimmerButton className="shadow-2xl h-10 bg-background">
-        <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-foreground from-foreground to-muted-foreground lg:text-lg">
           Star on Github
-        </span>
       </ShimmerButton>
+        </Link>
       <h2 className="text-center md:text-5xl text-2xl font-light md:w-4/5">
         Spend time to things that 
         <WordPullUp
@@ -167,7 +167,7 @@ export default async function Home() {
         <aside className="flex items-center gap-[2px]">
           <Button variant={'link'} className="rounded-full p-2" >
 
-          <Link href={'/'} className="rounded-full p-2" >
+          <Link href={'https://github.com/Omm2005/Tymely'} target="_blank" className="rounded-full p-2" >
             Github
           </Link>
           </Button>

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import { User } from 'next-auth';
 import LoginButton from './LoginButton';
-import TymelyLogo from '@/../public/Tymelylogo.png'
+import TymelyLogo from '@/../public/tymely-logo.png'
 import Image from 'next/image';
 import AnimatedGradientText from '../ui/animated-gradient-text';
 import { cn } from '@/lib/utils';

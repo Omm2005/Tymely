@@ -5,13 +5,13 @@ import { DM_Sans } from "next/font/google";
 import { ThemeProvider } from "@/Provider/theme-provider";
 import ModalProvider from "@/Provider/modal-provider";
 import ToastProvider from "@/Provider/toast-provider";
-import TymelyLogo from '@/../public/Tymelylogo.png'
+import TymelyLogo from '@/../public/tymely-logo.png'
 import TymelyLogoIco from '@/../public/favicon.ico'
 
 const font = DM_Sans({ subsets: ["latin"] });
 const title = "Tymely";
 const description = "It's Time to not waste it.An AI poweered time management tool. Tymely helps you to manage your time effectively which can convert your vision into actionable tasks.";
-const image = TymelyLogo.src
+const image = 'https://tymely.app/tymely-logo.jpeg'
 
 export const metadata: Metadata = {
   title,
