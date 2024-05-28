@@ -14,18 +14,6 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-model Post {
-    id        Int      @id @default(autoincrement())
-    name      String
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
-
-    createdBy   User   @relation(fields: [createdById], references: [id])
-    createdById String
-
-    @@index([name])
-}
-
 // Necessary for Next auth
 model Account {
     id                       String  @id @default(cuid())
@@ -62,7 +50,7 @@ model User {
     image         String?
     accounts      Account[]
     sessions      Session[]
-    posts         Post[]
+    workFlows     Workflows[]
 }
 
 model VerificationToken {
@@ -71,4 +59,40 @@ model VerificationToken {
     expires    DateTime
 
     @@unique([identifier, token])
+}
+
+model Workflows {
+    id       String   @id @default(uuid())
+    vision   String
+    fromDate DateTime
+    toDate   DateTime
+    duration Int
+    mileStone mileStone[]
+    User     User     @relation(fields: [userId], references: [id] , onDelete: Cascade)
+    userId   String
+}
+
+model mileStone {
+    id          String   @id @default(uuid())
+    title       String
+    ToDate      DateTime
+    FromDate    DateTime
+    isCompleted Boolean @default(false)
+    task        Task[]
+    workFlowId  String
+    Workflow   Workflows @relation(fields: [workFlowId], references: [id], onDelete: Cascade)
+}
+
+enum TaskStatus {
+    Pending
+    Completed
+    InProgress
+}
+
+model Task {
+    id          String   @id @default(uuid())
+    title       String
+    isCompleted TaskStatus @default(Pending)
+    mileStoneId String
+    mileStone   mileStone @relation(fields: [mileStoneId], references: [id], onDelete: Cascade)
 }
