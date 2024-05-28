@@ -85,7 +85,7 @@ const CalendarComponent = ({
         <p className='font-light text-foreground/80 text-sm'>
             Due Date: 
             <span className='ml-2'>
-            {milestones[counter]?.ToDate && format(milestones[counter]?.ToDate, "PPP")}
+            {milestones[counter]?.ToDate && format(milestones[counter]?.ToDate!, "PPP")}
             </span>
         </p>
         </div>
