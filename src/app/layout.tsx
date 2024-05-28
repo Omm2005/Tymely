@@ -5,8 +5,8 @@ import { DM_Sans } from "next/font/google";
 import { ThemeProvider } from "@/Provider/theme-provider";
 import ModalProvider from "@/Provider/modal-provider";
 import ToastProvider from "@/Provider/toast-provider";
-import TymelyLogo from '@/../public/tymely-logo.png'
 import TymelyLogoIco from '@/../public/favicon.ico'
+import { Analytics } from "@vercel/analytics/react"
 
 const font = DM_Sans({ subsets: ["latin"] });
 const title = "Tymely";
@@ -49,6 +49,7 @@ export default function RootLayout({
             <ModalProvider>
               <ToastProvider />
         {children}
+        <Analytics />
             </ModalProvider>
       </ThemeProvider>
       </body>
