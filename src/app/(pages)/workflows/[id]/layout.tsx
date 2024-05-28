@@ -8,31 +8,40 @@ import React from 'react'
 import Image from 'next/image'
 import TymelyLogo from '@/../public/tymely-logo.png'
 import { Metadata } from 'next'
-import TymelyLogoIco from '@/../public/favicon.ico'
 
 const title = "Workflow | Tymely";
 const description = "This is the workflow page of Tymely. Here you can create, edit, delete and manage workflows.";
-const image = TymelyLogo.src
+const image = 'https://tymely.vercel.app/tymely-logo.jpeg'
 
 export const metadata: Metadata = {
-  title,
-  description,
-  icons: [TymelyLogoIco.src],
+  title: title,
+  description: description,
   openGraph: {
-    title,
-    description,
-    images: [image],
+    images: [
+      {
+        url: image,
+        width: 1200,
+        height: 630,
+      },
+    ],
+    siteName: "Tymely",
+    title: "Tymely - Your AI Planner",
+    description: "Save your time and plan your day with Tymely.",
   },
   twitter: {
     card: "summary_large_image",
-    title,
-    description,
-    images: [image],
+    site: "https://tymely.vercel.app",
     creator: "@maiommhoon",
+    description: "Save your time and plan your day with Tymely",
+    images: [
+      {
+        url: image,
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
-  metadataBase: new URL("https://tymely.app/"),
 };
-
 const FlowLayout = async ({
   children
 }: {

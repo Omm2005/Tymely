@@ -5,31 +5,41 @@ import { DM_Sans } from "next/font/google";
 import { ThemeProvider } from "@/Provider/theme-provider";
 import ModalProvider from "@/Provider/modal-provider";
 import ToastProvider from "@/Provider/toast-provider";
-import TymelyLogoIco from '@/../public/favicon.ico'
 import { Analytics } from "@vercel/analytics/react"
 
 const font = DM_Sans({ subsets: ["latin"] });
 const title = "Tymely";
 const description = "It's Time to not waste it.An AI poweered time management tool. Tymely helps you to manage your time effectively which can convert your vision into actionable tasks.";
-const image = 'https://tymely.app/tymely-logo.jpeg'
+const image = 'https://tymely.vercel.app/tymely-logo.jpeg'
 
 export const metadata: Metadata = {
-  title,
-  description,
-  icons: [TymelyLogoIco.src],
+  title: title,
+  description: description,
   openGraph: {
-    title,
-    description,
-    images: [image],
+    images: [
+      {
+        url: image,
+        width: 1200,
+        height: 630,
+      },
+    ],
+    siteName: "Tymely",
+    title: "Tymely - Your AI Planner",
+    description: "Save your time and plan your day with Tymely.",
   },
   twitter: {
     card: "summary_large_image",
-    title,
-    description,
-    images: [image],
+    site: "https://tymely.vercel.app",
     creator: "@maiommhoon",
+    description: "Save your time and plan your day with Tymely",
+    images: [
+      {
+        url: image,
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
-  metadataBase: new URL("https://tymely.app/"),
 };
 
 export default function RootLayout({
