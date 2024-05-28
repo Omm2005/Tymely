@@ -50,9 +50,9 @@ export default function RootLayout({
             <ModalProvider>
               <ToastProvider />
         {children}
-        <Analytics />
             </ModalProvider>
       </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
